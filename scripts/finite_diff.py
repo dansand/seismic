@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pylab as plt
 
 # Show the plots in the Notebook.
-#plt.switch_backend("nbagg")
+plt.switch_backend("nbagg")
 
 # ---------------------------------------------------------
 # Simple finite difference solver
@@ -98,7 +98,7 @@ plt.xlabel('ix')
 plt.ylabel('iz')
 
 plt.ion()
-#plt.show()
+plt.show()
 
 
 # required for seismograms
@@ -136,6 +136,7 @@ for it in range(nt):
         plt.title("Max P: %.2f" % p.max())
         image.set_data(pnew)
         plt.draw()
+
 
 
     pold, p = p, pnew
